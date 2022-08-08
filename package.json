@@ -1,8 +1,11 @@
 {
   "name": "a-movies",
   "version": "0.0.0",
+  "proxy": "http://localhost:5000",
   "scripts": {
+    "con": "concurrently --kill-others \"npm run dev\" \"npm run backend\"",
     "dev": "vite",
+    "backend": "cd backend && venv/bin/flask run --no-debugger",
     "build": "vite build",
     "preview": "vite preview --port 4173"
   },
