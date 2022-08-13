@@ -1,21 +1,21 @@
 <script>
-import NavbarView from "@/components/NavbarView.vue";
-import Slide from "@/components/Slide.vue";
-export default {
+  import NavbarView from "@/components/Navigation/NavbarView.vue";
+  import Slide from "@/components/Navigation/Slide.vue";
+  export default {
   name: "DrawerSidebar",
   components: {
     NavbarView,
-    Slide
+    Slide,
   },
   data() {
     return {
-        showSlide:true
+      showSlide: false,   
     }
   },
 };
 </script>
 <!-- template -->
 <template>
-        <NavbarView @click="showSlide = !showSlide"/>
-        <Slide :class="showSlide?'block':'hidden'"/>    
+  <NavbarView  brand="A-movies"  @click="showSlide = !showSlide" />
+  <Slide :class="showSlide ? 'block' : 'hidden'" />
 </template>
