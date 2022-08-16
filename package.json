@@ -4,7 +4,7 @@
   "proxy": "http://localhost:5000",
   "scripts": {
     "con": "concurrently --kill-others \"npm run dev\" \"npm run backend\"",
-    "dev": "vite",
+    "dev": "vite --host",
     "backend": "cd backend && venv/bin/flask run --no-debugger",
     "build": "vite build",
     "preview": "vite preview --port 4173"

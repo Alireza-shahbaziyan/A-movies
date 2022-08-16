@@ -1,7 +1,8 @@
 <script setup>
+import Carousel from '../components/Home/Carousel.vue';
 
 </script>
 
 <template>
-              <h1 class="text-2xl font-semibold	text-teal-400" >Home</h1>
+            <Carousel/>
 </template>

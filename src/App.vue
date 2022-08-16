@@ -5,17 +5,10 @@ import BottomNavigation from "./views/BottomNavigation.vue";
 </script>
 
 <template>
-    <DrawerSidebar />
-  <div>
-    <nav>
-      </nav>
-    </div>
-
+  <DrawerSidebar />
   <RouterView />
-  
-  <BottomNavigation/>
+  <BottomNavigation />
 </template>
 
 <style scoped>
-
 </style>
