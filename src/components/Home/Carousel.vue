@@ -1,29 +1,20 @@
 <template>
-  <div class="h-64	w-full">
-<swiper
-    :spaceBetween="30"
-    :centeredSlides="true"
-    :autoplay="{
-      delay: 2500,
-      disableOnInteraction: false,
-    }"
-    :pagination="{
-      clickable: true,
-    }"
-    :navigation="true"
-    :modules="modules"
-    class="mySwiper w-full h-full"
-  >
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-    <swiper-slide class="text-center	text-lg bg-white flex justify-center items-center"><img class="object-cover	w-full h-full block" src="../../assets/12AngrayMan.jpg" alt="image"></swiper-slide>
-  </swiper>
+  <!-- slide box -->
+  <div class="h-60 w-full">
+    <swiper
+      :spaceBetween="30"
+      :centeredSlides="true"
+      :autoplay="{ delay: 2500, disableOnInteraction: false }"
+      :pagination="{ clickable: true }"
+      :navigation="true"
+      :modules="modules"
+      class="mySwiper w-full h-full"
+    >
+      <!-- Slide -->
+      <swiper-slide v-for="i in images" :key="i.id" class="text-center text-lg bg-white flex justify-center items-center">
+        <img class="object-cover w-full h-full block" :src="i.image" alt="Image"/>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 <script>
@@ -49,37 +40,36 @@ export default {
       modules: [Autoplay, Pagination, Navigation],
     };
   },
+  data() {
+    return {
+      images: [
+        {
+          id: 1,
+          image:
+            "https://m.media-amazon.com/images/M/MV5BZGNkMjUyOTMtZjk2Yy00NTExLWI2YWUtZDE4MTg5NjZiZjZkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+        },
+        {
+          id: 2,
+          image:
+            "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/02/Shutter-Island-Ending-Explained.jpg",
+        },
+        {
+          id: 3,
+          image:
+            "https://www.showbizgalore.com/wp-content/uploads/2022/06/dfdddd.jpg",
+        },
+        {
+          id: 4,
+          image:
+            "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b92d2865829416e35e7102a3934a2ee745f3b903a95678710442d4299d86f39c._RI_.jpg",
+        },
+        {
+          id: 5,
+          image:
+            "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/03/the-godfather-character-guide.jpg",
+        },
+      ],
+    };
+  },
 };
 </script>
-<style scoped>
-.swiper-slide {
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  /* display: flex; */
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  /* justify-content: center; */
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  /* align-items: center; */
-}
-</style>
-<!-- sliders: [
-        {
-          slide: "https://picsum.photos/200/300",
-        },
-        {
-          slide: "https://picsum.photos/200",
-        },
-        {
-          slide: "https://picsum.photos/id/237/200/300",
-        },
-        {
-          slide: "https://picsum.photos/seed/picsum/200/300",
-        },
-      ], -->
