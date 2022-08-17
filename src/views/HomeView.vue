@@ -8,7 +8,7 @@ import BodyCarousel from "../components/Home/BodyCarousel.vue";
     <div>
       <TopCarousel />
     </div>
-    <div class="h-2/3 flex flex-col justify-evenly">
+    <div class="h-1/2 flex flex-col justify-evenly">
       <div>
         <div class="text-2xl m-3.5">جدید ترین فیلم ها:</div>
         <BodyCarousel />
