@@ -4,3 +4,15 @@ body{
     overflow: hidden;
     height: 100vh;
 }
+#app{
+    height: 100vh;
+}
+@font-face {
+    font-family: "iransans";
+    src: url("./iransans-med.ttf");
+}
+
+
+* {
+    font-family: "iransans" !important;
+}

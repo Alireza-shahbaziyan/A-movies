@@ -1,6 +1,6 @@
 <template>
   <!-- slide box -->
-  <div class="h-60 w-full">
+  <div class="h-72 w-full">
     <swiper
       :spaceBetween="30"
       :centeredSlides="true"
@@ -12,7 +12,7 @@
     >
       <!-- Slide -->
       <swiper-slide v-for="i in images" :key="i.id" class="text-center text-lg bg-white flex justify-center items-center">
-        <img class="object-cover w-full h-full block" :src="i.image" alt="Image"/>
+        <img class="w-full h-full block" :src="i.image" alt="Image"/>
       </swiper-slide>
     </swiper>
   </div>
@@ -31,6 +31,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default {
+  name:"TopCarousel",
   components: {
     Swiper,
     SwiperSlide,
