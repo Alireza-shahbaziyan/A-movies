@@ -10,5 +10,8 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  singleQuote: true,
+  semi: false,
+  publicPath: '/A-movies/'
 })
