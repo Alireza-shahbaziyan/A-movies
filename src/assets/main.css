@@ -1,8 +1,8 @@
 @import "./base.css";
 
 body{
-    overflow: hidden;
-    height: 100vh;
+    /* overflow: hidden; */
+    /* height: 100vh; */
 }
 #app{
     height: 100vh;
