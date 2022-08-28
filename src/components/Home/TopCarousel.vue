@@ -1,6 +1,6 @@
 <template>
   <!-- slide box -->
-  <div class="h-56 w-full">
+  <div class="h-56 w-full md:h-96 lg:h-screen">
     <swiper
       :spaceBetween="30"
       :centeredSlides="true"
